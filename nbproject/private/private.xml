@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/InMemoryStudentRepository.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/usercase/StudentService.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/adapter/CourseRepository.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/school/School.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/usercase/CourseService.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/ConsoleMenu.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/adapter/StudentRepository.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/InMemoryCourseRepository.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/domain/Course.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/OracleStudentRepository.java</file>
+        </group>
+    </open-files>
+</project-private>
