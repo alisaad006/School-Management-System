@@ -37,7 +37,7 @@ public abstract class Person {
     public String getInfo() {
         return "ID: " + id
                 + "\nName:" + name
-                + "\nAge: " + email;
+                + "\nEmail: " + email;
     }
 
     // Getters

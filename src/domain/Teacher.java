@@ -13,10 +13,11 @@ public class Teacher extends Person {
 
     @Override
     public String getInfo() {
-        return "Teacher ID: " + getId()
+        return "Teachers: [ Teacher ID: " + getId()
                 + "\nName: " + getName()
                 + "\nEmail: " + getEmail()
-                + "\nSubject: " + subject;
+                + "\nSubject: " + subject
+                + "\nSalary: " + salary + " ]";
     }
 
     public String getSubject() {

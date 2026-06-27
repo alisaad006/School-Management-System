@@ -1,14 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package adapter;
 
-/**
- *
- * @author Dell
- */
-public class TeacherRepository {
+import domain.Teacher;
+import java.util.List;
+
+public interface TeacherRepository {
+    
+    void save(Teacher teacher);
+    
+    void update(Teacher teacher);
+    
+    void delete(int id);
+    
+    Teacher findById(int id);
+    
+    List<Teacher> findAll();
     
 }

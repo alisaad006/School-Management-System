@@ -35,7 +35,7 @@ public class Course {
                 + "\nTitle =" + title
                 + "\nTeacher Id =" + teacherId
                 + "\nMax Students =" + maxStudents
-                + "\nSeats =" + enrolledCount + "]";
+                + "\nSeats =" + enrolledCount + " ]";
     }
 
     public int getCourseId() {

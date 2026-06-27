@@ -35,15 +35,19 @@ public class School {
             // Repositoryes - Oracle Implementations
             StudentRepository sr = new OracleStudentRepository(con);
             CourseRepository cr = new OracleCourseRepository(con);
+            TeacherRepository tr = new OracleTeacherRepository(con);
+            GradeRepository gr = new OracleGradeRepository(con);
 
             // Services - recive repositoryes throgh constructor
             
             StudentService studentservice = new StudentService(sr);
             CourseService courseservice = new CourseService(cr);
+            TeacherService teacherservice = new TeacherService(tr);
+            GradeService gradeservice = new GradeService(gr);
             
 
             // Start the console menu
-            ConsoleMenu menu = new ConsoleMenu(studentservice, courseservice);
+            ConsoleMenu menu = new ConsoleMenu(studentservice, courseservice, teacherservice, gradeservice);
             menu.start();
         } catch (SQLException ex) {
             Logger.getLogger(School.class.getName()).log(Level.SEVERE, "Database connection failed.", ex);
