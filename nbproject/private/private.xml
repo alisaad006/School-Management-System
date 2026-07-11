@@ -5,14 +5,15 @@
         <group>
             <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/repository/OracleCourse.java</file>
             <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/console/ConsoleMenu.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/repository/InMemoryCourse.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/domain/exceptoins/ValidationException.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/school/LogConfig.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/adapter/CourseRepository.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/repository/OracleGrade.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/usercase/EnrollmentService.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/console/BaseMenu.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/domain/Enrollment.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/console/EnrollmentMenu.java</file>
             <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/school/School.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/console/CourseMenu.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/usercase/CourseService.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/domain/Course.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/adapter/EnrollmentRepository.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/repository/OracleEnrollment.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/school/src/infrastructure/repository/OracleStudent.java</file>
         </group>
     </open-files>
 </project-private>

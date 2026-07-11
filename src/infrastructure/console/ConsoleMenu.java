@@ -63,7 +63,7 @@ public class ConsoleMenu {
         System.out.println("  2. Courses");
         System.out.println("  3. Teachers");
         System.out.println("  4. Grades");
-        System.out.println("  4. Enrollment");
+        System.out.println("  5. Enrollment");
         System.out.println("  0. Exit");
         System.out.println("================================");
     }
