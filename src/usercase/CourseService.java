@@ -1,82 +1,97 @@
 package usercase;
 
 import adapter.CourseRepository;
+import adapter.TeacherRepository;
 import domain.Course;
 import domain.Student;
 import java.util.List;
+import java.util.logging.Logger;
+import domain.Course;
+import domain.exceptoins.*;
 
 public class CourseService {
 
-    private CourseRepository repo;
+    private CourseRepository courseRepo;
+    private final TeacherRepository teacherRepo;
+    private static final Logger LOGGER = Logger.getLogger(CourseService.class.getName());
 
-    public CourseService(CourseRepository repo) {
-        this.repo = repo;
+    public CourseService(CourseRepository repo, TeacherRepository teacherRepo) {
+        if (repo == null) {
+            throw new IllegalArgumentException("Course Repository cannot be null.");
+        }
+        if (teacherRepo == null) {
+            throw new IllegalArgumentException("Teacher Repository cannot be null.");
+        }
+        this.courseRepo = repo;
+        this.teacherRepo = teacherRepo;
     }
 
-    public void addcourse(Course course) {
+    public void addCourse(Course course) {
         if (course == null) {
-            System.out.println("Error: Cannot add a null Course");
-            return;
+            throw new IllegalArgumentException("Course cannot be null.");
         }
-        if (repo.findByID(course.getCourseId()) != null) {
-            System.out.println("Error: Course with ID " + course.getCourseId() + " already exists.");
-            return;
+
+        if (courseRepo.findById(course.getCourseId()) != null) {
+            throw new DuplicateEntityException("Course", course.getCourseId());
         }
-        repo.save(course);
+
+        if (teacherRepo.findById(course.getTeacherId()) == null) {
+            throw new EntityNotFoundException("Teacher", course.getTeacherId());
+        }
+
+        course.validate();
+        courseRepo.save(course);
+        LOGGER.info("Course added: ID= " + course.getCourseId() + ", Title= " + course.getTitle());
     }
 
     public void updateCourse(Course course) {
         if (course == null) {
-            System.out.println("Error: Cannot update a null Course.");
-            return;
+            throw new IllegalArgumentException("Course cannot be null.");
         }
-        repo.update(course);
+
+        if (courseRepo.findById(course.getCourseId()) == null) {
+            throw new EntityNotFoundException("Course", course.getCourseId());
+        }
+
+        if (teacherRepo.findById(course.getTeacherId()) == null) {
+            throw new EntityNotFoundException("Teacher", course.getTeacherId());
+        }
+
+        course.validate();
+        courseRepo.update(course);
+        LOGGER.info("Course updated: ID= " + course.getCourseId());
     }
 
     public void deleteCourse(int id) {
-        repo.delete(id);
+        if (courseRepo.findById(id) == null) {
+            throw new EntityNotFoundException("Course", id);
+        }
+        courseRepo.delete(id);
+        LOGGER.info("Course deleted: ID= " + id);
     }
 
     public List<Course> listCourse() {
-        return repo.findAll();
+        return courseRepo.findAll();
     }
 
     public Course findCourseById(int id) {
-        Course c = repo.findByID(id);
+        Course c = courseRepo.findById(id);
         if (c == null) {
-            System.out.println("Course with ID " + id + " not found.");
+            throw new EntityNotFoundException("Course", id);
         }
         return c;
     }
 
     public void assignTeacher(int courseId, int teacherId) {
-        Course c = repo.findByID(courseId);
+        Course c = findCourseById(courseId);
 
-        if (c == null) {
-            System.out.println("Cannot assign teacher. Course ID " + courseId + " dose not exist.");
-            return;
+        if (teacherRepo.findById(teacherId) == null) {
+            throw new EntityNotFoundException("Teacher", teacherId);
         }
 
         c.setTeacherId(teacherId);
-        System.out.println("Assigning Teacher ID " + teacherId + " to Course: " + c.getTitle());
-        repo.save(c);
-    }
-    
-    public void enrollStudentInCourse(int courseId, StudentService studentservice, int studentId) {
-        Course course = findCourseById(courseId);
-        Student student = studentservice.findStudent(studentId);
-        
-        if (course == null || student == null) return;
-        
-        if (course.isFull()) {
-            System.out.println("Error: Course '" + course.getTitle() + "' is full.");
-            return;
-        }
-        
-        student.enroll(course);
-        course.incrementEnrolled();
-        repo.update(course);
-        System.out.println("Enrolled " + student.getName() + " in " + course.getTitle() + " successfully.");
+        courseRepo.update(c);
+        LOGGER.info("Teacher " + teacherId + " assigned to course " + courseId);
     }
 
 }

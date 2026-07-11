@@ -11,7 +11,7 @@ public interface CourseRepository {
     
     void delete(int id);
 
-    Course findByID(int id);
+    Course findById(int id);
 
     List<Course> findAll();
 }

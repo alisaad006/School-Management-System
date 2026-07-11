@@ -1,0 +1,62 @@
+Jul 09, 2026 2:03:05 AM school.School main
+INFO: Database connected.
+Jul 09, 2026 2:03:55 AM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 09, 2026 2:03:55 AM school.School main
+INFO: Database connected.
+Jul 09, 2026 2:06:17 AM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 09, 2026 2:06:17 AM school.School main
+INFO: Database connected.
+Jul 09, 2026 2:06:34 AM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 09, 2026 2:06:34 AM school.School main
+INFO: Database connected.
+Jul 09, 2026 2:07:20 AM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 09, 2026 2:07:20 AM school.School main
+INFO: Database connected.
+Jul 09, 2026 2:07:26 AM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 09, 2026 2:07:26 AM school.School main
+INFO: Database connected.
+Jul 09, 2026 2:08:05 AM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 09, 2026 2:08:06 AM school.School main
+INFO: Database connected.
+Jul 09, 2026 2:10:34 AM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 09, 2026 2:10:34 AM school.School main
+INFO: Database connected.
+Jul 09, 2026 2:11:20 AM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 09, 2026 2:11:20 AM school.School main
+INFO: Database connected.
+Jul 10, 2026 9:01:23 PM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 10, 2026 9:01:23 PM school.School main
+INFO: Database connected.
+Jul 10, 2026 9:03:00 PM infrastructure.repository.OracleStudent delete
+INFO: Student deleted ID = 5
+Jul 10, 2026 9:03:00 PM usercase.StudentService deleteStudent
+INFO: Student with ID 5 deleted successfully.
+Jul 10, 2026 9:34:39 PM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 10, 2026 9:34:39 PM school.School main
+INFO: Database connected.
+Jul 11, 2026 1:50:11 PM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 11, 2026 1:50:12 PM school.School main
+INFO: Database connected.
+Jul 11, 2026 2:09:30 PM school.School main
+WARNING: Environment variables not set. Using local dev config.
+Jul 11, 2026 2:09:30 PM school.School main
+INFO: Database connected.
+Jul 11, 2026 2:10:38 PM infrastructure.repository.OracleEnrollment unenroll
+INFO: Unenrolled: Student ID=1001 from Course ID=101
+Jul 11, 2026 2:10:38 PM usercase.EnrollmentService unenrollStudent
+INFO: Student ID = 1001 unenrolled from Course ID = 101
+Jul 11, 2026 2:10:54 PM infrastructure.repository.OracleStudent delete
+INFO: Student deleted ID = 1001
+Jul 11, 2026 2:10:54 PM usercase.StudentService deleteStudent
+INFO: Student with ID 1001 deleted successfully.
